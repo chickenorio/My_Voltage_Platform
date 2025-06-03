@@ -1,0 +1,56 @@
+anomaly_detection:
+  isolation_forest:
+    contamination: 0.1
+    random_state: 42
+  lof:
+    contamination: 0.1
+    n_neighbors: 20
+  statistical:
+    rolling_window: 24
+    z_score_threshold: 3
+feature_engineering:
+  scaling:
+    current: robust
+    power: minmax
+    voltage: standard
+  time_features:
+  - hour_sin_cos
+  - day_of_week
+  - month
+  - is_weekend
+  - is_holiday
+  window_aggregations:
+    functions:
+    - mean
+    - std
+    - min
+    - max
+    - range
+    sizes:
+    - 6
+    - 12
+    - 24
+missing_values:
+  current:
+    method: knn
+    n_neighbors: 5
+    strategy: model_impute
+  power:
+    limit: 12
+    strategy: forward_fill
+  voltage:
+    limit: 24
+    method: time
+    strategy: interpolate
+validation:
+  current:
+    max: 500
+    min: 0
+  power:
+    min: 0
+  unique_combinations:
+  - - timestamp
+    - id_line
+  voltage:
+    max: 260
+    min: 180
