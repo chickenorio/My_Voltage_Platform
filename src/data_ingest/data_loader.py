@@ -5,27 +5,39 @@ from pathlib import Path
 from typing import Union, Optional
 import logging
 import yaml
+import io
+from streamlit.runtime.uploaded_file_manager import UploadedFile
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
-def detect_encoding(file_path: Union[str, Path]) -> str:
+def detect_encoding(file_path: Union[str, Path, UploadedFile]) -> str:
     """Detect the encoding of a file using chardet."""
-    with open(file_path, 'rb') as file:
-        raw_data = file.read()
+    if isinstance(file_path, UploadedFile):
+        raw_data = file_path.getvalue()
         result = chardet.detect(raw_data)
         return result['encoding']
+    else:
+        with open(file_path, 'rb') as file:
+            raw_data = file.read()
+            result = chardet.detect(raw_data)
+            return result['encoding']
 
-def detect_delimiter(file_path: Union[str, Path], encoding: str) -> str:
+def detect_delimiter(file_path: Union[str, Path, UploadedFile], encoding: str) -> str:
     """Detect the delimiter of a CSV file."""
-    with open(file_path, 'r', encoding=encoding) as file:
-        first_line = file.readline()
-        sniffer = csv.Sniffer()
-        dialect = sniffer.sniff(first_line)
-        return dialect.delimiter
+    if isinstance(file_path, UploadedFile):
+        content = file_path.getvalue().decode(encoding)
+        first_line = content.split('\n')[0]
+    else:
+        with open(file_path, 'r', encoding=encoding) as file:
+            first_line = file.readline()
+    
+    sniffer = csv.Sniffer()
+    dialect = sniffer.sniff(first_line)
+    return dialect.delimiter
 
 def load_csv(
-    path: Union[str, Path],
+    path: Union[str, Path, UploadedFile],
     encoding: Optional[str] = None,
     delimiter: Optional[str] = None,
     **kwargs
@@ -34,7 +46,7 @@ def load_csv(
     Load a CSV file with automatic encoding and delimiter detection.
     
     Args:
-        path: Path to the CSV file
+        path: Path to the CSV file or UploadedFile object from Streamlit
         encoding: Optional encoding override
         delimiter: Optional delimiter override
         **kwargs: Additional arguments passed to pd.read_csv
@@ -42,26 +54,47 @@ def load_csv(
     Returns:
         pd.DataFrame: Loaded data
     """
-    path = Path(path)
-    if not path.exists():
-        raise FileNotFoundError(f"File not found: {path}")
-    
-    # Detect encoding if not provided
-    if encoding is None:
-        encoding = detect_encoding(path)
-        logger.info(f"Detected encoding: {encoding}")
-    
-    # Detect delimiter if not provided
-    if delimiter is None:
-        delimiter = detect_delimiter(path, encoding)
-        logger.info(f"Detected delimiter: {delimiter}")
-    
     try:
-        df = pd.read_csv(path, encoding=encoding, delimiter=delimiter, **kwargs)
-        logger.info(f"Successfully loaded {path} with shape {df.shape}")
-        return df
+        # Handle Streamlit UploadedFile
+        if isinstance(path, UploadedFile):
+            # Detect encoding if not provided
+            if encoding is None:
+                encoding = detect_encoding(path)
+                logger.info(f"Detected encoding: {encoding}")
+            
+            # Detect delimiter if not provided
+            if delimiter is None:
+                delimiter = detect_delimiter(path, encoding)
+                logger.info(f"Detected delimiter: {delimiter}")
+            
+            # Read the file content
+            content = path.getvalue().decode(encoding)
+            df = pd.read_csv(io.StringIO(content), delimiter=delimiter, **kwargs)
+            logger.info(f"Successfully loaded uploaded file with shape {df.shape}")
+            return df
+        
+        # Handle regular file path
+        else:
+            path = Path(path)
+            if not path.exists():
+                raise FileNotFoundError(f"File not found: {path}")
+            
+            # Detect encoding if not provided
+            if encoding is None:
+                encoding = detect_encoding(path)
+                logger.info(f"Detected encoding: {encoding}")
+            
+            # Detect delimiter if not provided
+            if delimiter is None:
+                delimiter = detect_delimiter(path, encoding)
+                logger.info(f"Detected delimiter: {delimiter}")
+            
+            df = pd.read_csv(path, encoding=encoding, delimiter=delimiter, **kwargs)
+            logger.info(f"Successfully loaded {path} with shape {df.shape}")
+            return df
+            
     except Exception as e:
-        logger.error(f"Error loading {path}: {str(e)}")
+        logger.error(f"Error loading data: {str(e)}")
         raise
 
 def save_processed_data(

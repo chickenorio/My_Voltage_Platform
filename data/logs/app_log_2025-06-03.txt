@@ -1,0 +1,479 @@
+
+[2025-06-03 16:51:02] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Wykryto nowy plik: network_voltage_data —braki.csv
+==================================================
+[2025-06-03 16:51:02] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Odczytano 42145 rekordów z pliku
+==================================================
+[2025-06-03 16:51:03] === OPERACJA: ZAPIS PLIKU ===
+Szczegóły: Dane zapisane do working_data.csv
+==================================================
+[2025-06-03 16:51:03] === OPERACJA: AKTUALIZACJA STANU ===
+Szczegóły: Dane zaktualizowane w session_state
+==================================================
+[2025-06-03 16:51:17] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Rozpoczynam odczyt pliku working_data.csv
+==================================================
+[2025-06-03 16:51:17] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Odczytano 42145 rekordów
+==================================================
+[2025-06-03 16:51:17] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Dane skopiowane do session_state
+==================================================
+[2025-06-03 16:52:04] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Rozpoczynam odczyt pliku working_data.csv
+==================================================
+[2025-06-03 16:52:04] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Odczytano 42145 rekordów
+==================================================
+[2025-06-03 16:52:04] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Dane skopiowane do session_state
+==================================================
+[2025-06-03 16:56:18] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Wykryto nowy plik: network_voltage_data —braki.csv
+==================================================
+[2025-06-03 16:56:18] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Odczytano 42145 rekordów z pliku
+==================================================
+[2025-06-03 16:56:19] === OPERACJA: ZAPIS PLIKU ===
+Szczegóły: Dane zapisane do working_data.csv
+==================================================
+[2025-06-03 16:56:19] === OPERACJA: AKTUALIZACJA STANU ===
+Szczegóły: Dane zaktualizowane w session_state
+==================================================
+[2025-06-03 16:56:26] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Rozpoczynam odczyt pliku working_data.csv
+==================================================
+[2025-06-03 16:56:26] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Odczytano 42145 rekordów
+==================================================
+[2025-06-03 16:56:26] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Dane skopiowane do session_state
+==================================================
+[2025-06-03 16:56:45] === OPERACJA: WYKRYWANIE ANOMALII ===
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+==================================================
+[2025-06-03 16:56:45] === OPERACJA: WYKRYWANIE ANOMALII ===
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+==================================================
+[2025-06-03 16:57:02] === OPERACJA: WYKRYWANIE ANOMALII ===
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+==================================================
+[2025-06-03 16:57:02] === OPERACJA: WYKRYWANIE ANOMALII ===
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+==================================================
+[2025-06-03 17:11:19] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Wykryto nowy plik: network_voltage_data —braki.csv
+==================================================
+[2025-06-03 17:11:20] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Odczytano 42145 rekordów z pliku
+==================================================
+[2025-06-03 17:11:20] === OPERACJA: ZAPIS PLIKU ===
+Szczegóły: Dane zapisane do working_data.csv
+==================================================
+[2025-06-03 17:11:20] === OPERACJA: AKTUALIZACJA STANU ===
+Szczegóły: Dane zaktualizowane w session_state
+==================================================
+[2025-06-03 17:11:27] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Przycisk: Wykryj anomalie
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+Statystyki danych:
+Liczba rekordów: 42145
+Statystyki kolumny voltage_extreme:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:11:27] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+Statystyki danych:
+Średnia: 215.34
+Odchylenie: 10.05
+Próg: 3.0
+Przykładowe anomalie:
+4       300.00
+392     253.45
+654     247.07
+2090    247.25
+6091    256.30
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:11:45] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Rozpoczynam odczyt pliku working_data.csv
+==================================================
+[2025-06-03 17:11:45] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Odczytano 42145 rekordów
+==================================================
+[2025-06-03 17:11:45] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Dane skopiowane do session_state
+==================================================
+[2025-06-03 17:11:49] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Przycisk: Wykryj anomalie
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+Statystyki danych:
+Liczba rekordów: 42145
+Statystyki kolumny voltage_extreme:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:11:49] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+Statystyki danych:
+Średnia: 215.34
+Odchylenie: 10.05
+Próg: 3.0
+Przykładowe anomalie:
+4       300.00
+392     253.45
+654     247.07
+2090    247.25
+6091    256.30
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:15:20] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Wykryto nowy plik: network_voltage_data —braki.csv
+==================================================
+[2025-06-03 17:15:20] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Odczytano 42145 rekordów z pliku
+==================================================
+[2025-06-03 17:15:20] === OPERACJA: ZAPIS PLIKU ===
+Szczegóły: Dane zapisane do working_data.csv
+==================================================
+[2025-06-03 17:15:20] === OPERACJA: AKTUALIZACJA STANU ===
+Szczegóły: Dane zaktualizowane w session_state
+==================================================
+[2025-06-03 17:15:30] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Przycisk: Wykryj anomalie
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+Statystyki danych:
+Liczba rekordów: 42145
+Statystyki kolumny voltage_extreme:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:15:30] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+Statystyki danych:
+Średnia: 215.34
+Odchylenie: 10.05
+Próg: 3.0
+Przykładowe anomalie:
+4       300.00
+392     253.45
+654     247.07
+2090    247.25
+6091    256.30
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:15:37] === OPERACJA: OBSŁUGA ANOMALII ===
+Funkcja: handle_anomalies
+Przycisk: Zastosuj wybraną akcję
+Szczegóły: Rozpoczynam Usuń anomalie dla 14 anomalii
+Statystyki danych:
+Liczba anomalii: 14
+Statystyki przed zmianą:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:15:37] === OPERACJA: USUWANIE ANOMALII ===
+Funkcja: remove_anomalies
+Szczegóły: Usuwam 14 rekordów z anomaliami
+Statystyki danych:
+Liczba rekordów przed: 42145
+Liczba rekordów do usunięcia: 14
+==================================================
+[2025-06-03 17:15:37] === OPERACJA: USUWANIE ANOMALII ===
+Funkcja: remove_anomalies
+Szczegóły: Usunięto anomalie
+Statystyki danych:
+Liczba rekordów po usunięciu: 42131
+==================================================
+[2025-06-03 17:15:37] === OPERACJA: ZAPIS ZMIAN ===
+Funkcja: save_data
+Szczegóły: Zapisuję zmodyfikowane dane (42131 rekordów) do working_data.csv
+Statystyki danych:
+Statystyki przed zapisem:
+count    42131.000000
+mean       215.329081
+std         10.020505
+min        200.000000
+25%        206.280000
+50%        215.260000
+75%        224.110000
+max        245.060000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:15:38] === OPERACJA: AKTUALIZACJA STANU ===
+Funkcja: update_session_state
+Szczegóły: Dane zaktualizowane w session_state
+Statystyki danych:
+Liczba rekordów w session_state: 42131
+==================================================
+[2025-06-03 17:15:43] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Rozpoczynam odczyt pliku working_data.csv
+==================================================
+[2025-06-03 17:15:43] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Odczytano 42131 rekordów
+==================================================
+[2025-06-03 17:15:43] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Dane skopiowane do session_state
+==================================================
+[2025-06-03 17:15:54] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Przycisk: Wykryj anomalie
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+Statystyki danych:
+Liczba rekordów: 42131
+Statystyki kolumny voltage_extreme:
+count    42131.000000
+mean       215.329081
+std         10.020505
+min        200.000000
+25%        206.280000
+50%        215.260000
+75%        224.110000
+max        245.060000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:15:54] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Szczegóły: Wykryto 0 anomalii metodą odchylenia standardowego
+Statystyki danych:
+Średnia: 215.33
+Odchylenie: 10.02
+Próg: 3.0
+Przykładowe anomalie:
+Series([], Name: voltage_extreme, dtype: float64)
+==================================================
+[2025-06-03 17:16:50] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Wykryto nowy plik: network_voltage_data —braki.csv
+==================================================
+[2025-06-03 17:16:51] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Odczytano 42145 rekordów z pliku
+==================================================
+[2025-06-03 17:16:51] === OPERACJA: ZAPIS PLIKU ===
+Szczegóły: Dane zapisane do working_data.csv
+==================================================
+[2025-06-03 17:16:51] === OPERACJA: AKTUALIZACJA STANU ===
+Szczegóły: Dane zaktualizowane w session_state
+==================================================
+[2025-06-03 17:16:59] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Przycisk: Wykryj anomalie
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+Statystyki danych:
+Liczba rekordów: 42145
+Statystyki kolumny voltage_extreme:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:16:59] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+Statystyki danych:
+Średnia: 215.34
+Odchylenie: 10.05
+Próg: 3.0
+Przykładowe anomalie:
+4       300.00
+392     253.45
+654     247.07
+2090    247.25
+6091    256.30
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:17:07] === OPERACJA: OBSŁUGA ANOMALII ===
+Funkcja: handle_anomalies
+Przycisk: Zastosuj wybraną akcję
+Szczegóły: Rozpoczynam Usuń anomalie dla 14 anomalii
+Statystyki danych:
+Liczba anomalii: 14
+Statystyki przed zmianą:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:17:08] === OPERACJA: USUWANIE ANOMALII ===
+Funkcja: remove_anomalies
+Szczegóły: Usuwam 14 rekordów z anomaliami
+Statystyki danych:
+Liczba rekordów przed: 42145
+Liczba rekordów do usunięcia: 14
+==================================================
+[2025-06-03 17:17:08] === OPERACJA: USUWANIE ANOMALII ===
+Funkcja: remove_anomalies
+Szczegóły: Usunięto anomalie
+Statystyki danych:
+Liczba rekordów po usunięciu: 42131
+==================================================
+[2025-06-03 17:17:08] === OPERACJA: ZAPIS ZMIAN ===
+Funkcja: save_data
+Szczegóły: Zapisuję zmodyfikowane dane (42131 rekordów) do working_data.csv
+Statystyki danych:
+Statystyki przed zapisem:
+count    42131.000000
+mean       215.329081
+std         10.020505
+min        200.000000
+25%        206.280000
+50%        215.260000
+75%        224.110000
+max        245.060000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:17:08] === OPERACJA: AKTUALIZACJA STANU ===
+Funkcja: update_session_state
+Szczegóły: Dane zaktualizowane w session_state
+Statystyki danych:
+Liczba rekordów w session_state: 42131
+==================================================
+[2025-06-03 17:18:00] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Wykryto nowy plik: network_voltage_data —braki.csv
+==================================================
+[2025-06-03 17:18:00] === OPERACJA: WCZYTYWANIE PLIKU ===
+Szczegóły: Odczytano 42145 rekordów z pliku
+==================================================
+[2025-06-03 17:18:00] === OPERACJA: ZAPIS PLIKU ===
+Szczegóły: Dane zapisane do working_data.csv
+==================================================
+[2025-06-03 17:18:00] === OPERACJA: AKTUALIZACJA STANU ===
+Szczegóły: Dane zaktualizowane w session_state
+==================================================
+[2025-06-03 17:18:03] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Rozpoczynam odczyt pliku working_data.csv
+==================================================
+[2025-06-03 17:18:03] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Odczytano 42145 rekordów
+==================================================
+[2025-06-03 17:18:03] === OPERACJA: PRZEŁADOWANIE DANYCH ===
+Szczegóły: Dane skopiowane do session_state
+==================================================
+[2025-06-03 17:18:08] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Przycisk: Wykryj anomalie
+Szczegóły: Rozpoczynam wykrywanie anomalii dla kolumny voltage_extreme
+Statystyki danych:
+Liczba rekordów: 42145
+Statystyki kolumny voltage_extreme:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:18:08] === OPERACJA: WYKRYWANIE ANOMALII ===
+Funkcja: detect_anomalies
+Szczegóły: Wykryto 14 anomalii metodą odchylenia standardowego
+Statystyki danych:
+Średnia: 215.34
+Odchylenie: 10.05
+Próg: 3.0
+Przykładowe anomalie:
+4       300.00
+392     253.45
+654     247.07
+2090    247.25
+6091    256.30
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:18:21] === OPERACJA: OBSŁUGA ANOMALII ===
+Funkcja: handle_anomalies
+Przycisk: Zastosuj wybraną akcję
+Szczegóły: Rozpoczynam Usuń anomalie dla 14 anomalii
+Statystyki danych:
+Liczba anomalii: 14
+Statystyki przed zmianą:
+count    42145.000000
+mean       215.341524
+std         10.045027
+min        200.000000
+25%        206.280000
+50%        215.270000
+75%        224.120000
+max        300.000000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:18:21] === OPERACJA: USUWANIE ANOMALII ===
+Funkcja: remove_anomalies
+Szczegóły: Usuwam 14 rekordów z anomaliami
+Statystyki danych:
+Liczba rekordów przed: 42145
+Liczba rekordów do usunięcia: 14
+==================================================
+[2025-06-03 17:18:21] === OPERACJA: USUWANIE ANOMALII ===
+Funkcja: remove_anomalies
+Szczegóły: Usunięto anomalie
+Statystyki danych:
+Liczba rekordów po usunięciu: 42131
+==================================================
+[2025-06-03 17:18:21] === OPERACJA: ZAPIS ZMIAN ===
+Funkcja: save_data
+Szczegóły: Zapisuję zmodyfikowane dane (42131 rekordów) do working_data.csv
+Statystyki danych:
+Statystyki przed zapisem:
+count    42131.000000
+mean       215.329081
+std         10.020505
+min        200.000000
+25%        206.280000
+50%        215.260000
+75%        224.110000
+max        245.060000
+Name: voltage_extreme, dtype: float64
+==================================================
+[2025-06-03 17:18:22] === OPERACJA: AKTUALIZACJA STANU ===
+Funkcja: update_session_state
+Szczegóły: Dane zaktualizowane w session_state
+Statystyki danych:
+Liczba rekordów w session_state: 42131
+==================================================
